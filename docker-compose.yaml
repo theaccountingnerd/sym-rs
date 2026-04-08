@@ -25,6 +25,20 @@ services:
     networks:
       - backend
 
+  nginx-proxy:
+    image: jonasal/nginx-certbot:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - CERTBOT_EMAIL=aaron@theaccountingnerd.com
+    volumes:
+      - ./nginx_conf:/etc/nginx/user_conf.d
+      - ./letsencrypt:/etc/letsencrypt
+    depends_on:
+      - resourcespace
+
 networks:
   frontend:
   backend:
