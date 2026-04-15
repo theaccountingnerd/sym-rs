@@ -8,6 +8,7 @@ services:
     volumes:
       - filestore:/var/www/html/filestore
       - ./config.php:/var/www/html/include/config.php
+      - /opt/rs_uploads:/mnt/imports
     networks:
       - frontend
       - backend
