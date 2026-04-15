@@ -14,7 +14,7 @@ $mysql_password = 'test_pass_sym_resource';
 $mysql_db = 'resourcespace';
 
 # Base URL of the installation
-$baseurl = 'http://192.168.4.39';
+$baseurl = 'http://192.168.0.124';
 
 # Email settings
 $email_notify = 'aaron@theaccountingnerd.com';
@@ -81,4 +81,4 @@ $hide_real_filepath = true;
 $annotate_enabled = true;
 
 $plugins[] = "brand_guidelines";
-
+$syncdir = "/mnt/imports";
